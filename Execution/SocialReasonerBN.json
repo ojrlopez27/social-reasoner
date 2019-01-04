@@ -1,0 +1,309 @@
+{
+  "modules": [
+    {
+      "name": "SD",
+      "id": "SD_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "MEDIUM_RAPPORT",
+          "RAPPORT_DECREASED"
+        ],
+        [
+          "SD_USER_CS",
+          "QESD_USER_CS"
+        ],
+        [
+          "NOT_SMILE_NONVERBAL",
+          "GAZE_ELSEWHERE_NONVERBAL"
+        ],
+        [
+          "introduce",
+          "start_*"
+        ],
+        [
+          "SEVERAL_ASN_HISTORY_SYSTEM",
+          "PR_HISTORY_SYSTEM",
+          "VSN_HISTORY_SYSTEM",
+          "NUM_TURNS_LOWER_THAN_THRESHOLD",
+          "NOT_SD_HISTORY_SYSTEM"
+        ]
+      ],
+      "addList": [
+        "SD_HISTORY_SYSTEM",
+        "SMILE_NONVERBAL",
+        "GAZE_PARTNER_NONVERBAL",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED"
+      ],
+      "deleteList": [
+        "RAPPORT_DECREASED",
+        "SD_USER_CS",
+        "QESD_USER_CS",
+        "PR_HISTORY_SYSTEM",
+        "VSN_HISTORY_SYSTEM",
+        "introduce",
+        "start_*"
+      ],
+      "description": "Self Disclosure",
+      "addGoals": []
+    },
+
+    {
+      "name": "PR",
+      "id": "PR_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT"
+        ],
+        [
+          "NOT_PR_USER_CS"
+        ],
+        [
+          "NOT_PR_HISTORY_USER",
+          "NOT_PR_HISTORY_SYSTEM",
+          "SD_HISTORY_SYSTEM",
+          "QESD_HISTORY_SYSTEM",
+          "QESD_HISTORY_USER",
+          "NUM_TURNS_LOWER_THAN_THRESHOLD"
+        ]
+      ],
+      "addList": [
+        "PR_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED"
+      ],
+      "deleteList": [
+        "LOW_RAPPORT",
+        "NOT_PR_HISTORY_SYSTEM"
+      ],
+      "description": "Praise",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "ACK",
+      "id": "ACK_SYSTEM_CS",
+      "preconditions": [
+        [
+          "SD_USER_CS",
+          "VSN_USER_CS"
+        ],
+        [
+          "GAZE_PARTNER_NONVERBAL"
+        ],
+        [
+          "NOT_ACK_HISTORY_USER",
+          "NOT_ACK_HISTORY_SYSTEM"
+        ],
+        [
+          "feedback_*"
+        ]
+      ],
+      "addList": [
+        "ACK_HISTORY_SYSTEM",
+        "RAPPORT_MAINTAINED"
+      ],
+      "deleteList": [
+        "NOT_ACK_HISTORY_SYSTEM",
+        "feedback_*"
+      ],
+      "description": "Acknowledgement",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "QESD",
+      "id": "QESD_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT"
+        ],
+        [
+          "NOT_QESD_HISTORY_USER",
+          "NOT_QESD_HISTORY_SYSTEM",
+          "NOT_SD_HISTORY_SYSTEM"
+        ],
+        [
+          "do_*_elicit*",
+          "pre_closing",
+          "ask_*"
+        ]
+      ],
+      "addList": [
+        "QESD_HISTORY_SYSTEM",
+        "SD_USER_CS",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "NOT_QESD_HISTORY_SYSTEM",
+        "NOT_SD_HISTORY_SYSTEM",
+        "do_*_elicit*",
+        "pre_closing",
+        "ask_*"
+      ],
+      "description": "Question to Elicit Self Disclosure",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "RSE",
+      "id": "RSE_SYSTEM_CS",
+      "preconditions": [
+        [
+          "MEDIUM_RAPPORT",
+          "HIGH_RAPPORT",
+          "RAPPORT_INCREASED",
+          "RAPPORT_MAINTAINED"
+        ],
+        [
+          "RSE_USER_CS",
+          "SD_USER_CS",
+          "VSN_USER_CS"
+        ],
+        [
+          "GAZE_ELSEWHERE_NONVERBAL"
+        ],
+        [
+          "VSN_HISTORY_SYSTEM",
+          "VSN_HISTORY_USER",
+          "NOT_RSE_HISTORY_SYSTEM"
+        ],
+        [
+          "AVAILABLE_SHARED_EXPERIENCES"
+        ],
+        [
+          "greeting",
+          "start_*"
+        ]
+      ],
+      "addList": [
+        "RSE_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "GAZE_ELSEWHERE_NONVERBAL"
+      ],
+      "description": "Referring to Shared Experiences",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "VSN",
+      "id": "VSN_SYSTEM_CS",
+      "preconditions": [
+        [
+          "HIGH_RAPPORT",
+          "RAPPORT_INCREASED"
+        ],
+        [
+          "VSN_USER_CS"
+        ],
+        [
+          "SMILE_NONVERBAL",
+          "GAZE_PARTNER_NONVERBAL"
+        ],
+        [
+          "NUM_TURNS_HIGHER_THAN_THRESHOLD",
+          "NOT_OVERLAP",
+          "ONCE_VSN_HISTORY_USER",
+          "NOT_VSN_HISTORY_SYSTEM"
+        ],
+        [
+          "feedback_*",
+          "start_*",
+          "do_*_elicit*"
+        ]
+      ],
+      "addList": [
+        "VSN_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "SMILE_NONVERBAL"
+      ],
+      "deleteList": [
+        "NOT_VSN_HISTORY_SYSTEM",
+        "greeting",
+        "feedback_*",
+        "start_*",
+        "do_*_elicit*"
+      ],
+      "description": "Violation Social Norm",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "ASN",
+      "id": "ASN_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "MEDIUM_RAPPORT",
+          "RAPPORT_MAINTAINED",
+          "RAPPORT_DECREASED"
+        ],
+        [
+          "NOT_ASN_HISTORY_SYSTEM"
+        ],
+        [
+          "outcome_*_recommendation_*",
+          "pre_closing",
+          "greeting",
+          "farewell",
+          "feedback_*",
+          "start_*"
+        ]
+      ],
+      "addList": [
+        "ASN_HISTORY_SYSTEM",
+        "SEVERAL_ASN_HISTORY_SYSTEM",
+        "RAPPORT_MAINTAINED",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "NOT_ASN_HISTORY_SYSTEM",
+        "outcome_*_recommendation_*",
+        "pre_closing",
+        "greeting",
+        "farewell",
+        "feedback_*",
+        "start_*"
+      ],
+      "description": "Adhere Social Norm",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "NONE",
+      "id": "NONE_SYSTEM_CS",
+      "preconditions": [
+        []
+      ],
+      "addList": [],
+      "description": "NONE Conversational Strategy",
+      "addGoals": [],
+      "deleteList": []
+    }
+  ],
+  "states": [
+    "greeting"
+  ],
+  "goals": [
+    "RAPPORT_INCREASED",
+    "RAPPORT_MAINTAINED"
+  ],
+  "pi": 15,
+  "theta": 15,
+  "initialTheta": 15,
+  "phi": 70,
+  "gamma": 20,
+  "delta": 50,
+  "removePrecond": false
+}

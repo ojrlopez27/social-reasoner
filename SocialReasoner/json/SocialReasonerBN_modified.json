@@ -1,0 +1,327 @@
+{
+  "modules": [
+    {
+      "name": "SD",
+      "id": "SD_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "MEDIUM_RAPPORT",
+          "RAPPORT_DECREASED",
+          "RAPPORT_MAINTAINED"
+        ],
+        [
+          "SD_USER_CS",
+          "QESD_USER_CS"
+        ],
+        [
+          "SMILE_NONVERBAL",
+          "GAZE_ELSEWHERE_NONVERBAL"
+        ],
+        [
+          "introduce",
+          "start_attendance_elicitation",
+          "start_goal_elicitation",
+          "start_interest_elicitation*",
+          "start_*_recommendation_*"
+        ],
+        [
+          "SEVERAL_ASN_HISTORY_SYSTEM",
+          "PR_HISTORY_SYSTEM",
+          "VSN_HISTORY_SYSTEM",
+          "NUM_TURNS_LOWER_THAN_THRESHOLD",
+          "NOT_SD_HISTORY_SYSTEM"
+        ]
+      ],
+      "addList": [
+        "SD_SYSTEM_CS",
+        "SD_HISTORY_SYSTEM",
+        "SMILE_NONVERBAL",
+        "GAZE_PARTNER_NONVERBAL",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED"
+      ],
+      "deleteList": [
+        "RAPPORT_DECREASED",
+        "SD_USER_CS",
+        "QESD_USER_CS",
+        "PR_HISTORY_SYSTEM",
+        "VSN_HISTORY_SYSTEM",
+        "introduce",
+        "start_attendance_elicitation",
+        "start_goal_elicitation",
+        "start_interest_elicitation*",
+        "start_*_recommendation_*"
+      ],
+      "description": "Self Disclosure",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "PR",
+      "id": "PR_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "RAPPORT_DECREASED"
+        ],
+        [
+          "NOT_PR_USER_CS"
+        ],
+        [
+          "NOT_PR_HISTORY_USER",
+          "NOT_PR_HISTORY_SYSTEM",
+          "SD_HISTORY_SYSTEM",
+          "QESD_HISTORY_SYSTEM",
+          "QESD_HISTORY_USER",
+          "NOT_VSN_HISTORY_SYSTEM",
+          "NOT_VSN_HISTORY_USER",
+          "NUM_TURNS_LOWER_THAN_THRESHOLD"
+        ]
+      ],
+      "addList": [
+        "PR_SYSTEM_CS",
+        "PR_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED"
+      ],
+      "deleteList": [
+        "LOW_RAPPORT",
+        "NOT_PR_USER_CS",
+        "NOT_PR_HISTORY_SYSTEM"
+      ],
+      "description": "Praise",
+      "addGoals": []
+    },
+
+    {
+      "name": "QESD",
+      "id": "QESD_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "MEDIUM_RAPPORT",
+          "HIGH_RAPPORT",
+          "RAPPORT_INCREASED",
+          "RAPPORT_MAINTAINED"
+        ],
+        [
+          "NOT_QESD_HISTORY_USER"
+        ],
+        [
+          "NOT_QESD_HISTORY_SYSTEM",
+          "NOT_SD_HISTORY_SYSTEM"
+        ],
+        [
+          "do_attendance_elicitation",
+          "do_goal_elicitation",
+          "do_interest_elicitation_*",
+          "pre_closing"
+        ]
+      ],
+      "addList": [
+        "QESD_SYSTEM_CS",
+        "QESD_HISTORY_SYSTEM",
+        "SD_USER_CS",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "LOW_RAPPORT",
+        "NOT_QESD_HISTORY_SYSTEM",
+        "NOT_SD_HISTORY_SYSTEM",
+        "do_attendance_elicitation",
+        "do_goal_elicitation",
+        "do_interest_elicitation_*",
+        "pre_closing"
+      ],
+      "description": "Question to Elicit Self Disclosure",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "RSE",
+      "id": "RSE_SYSTEM_CS",
+      "preconditions": [
+        [
+          "MEDIUM_RAPPORT",
+          "HIGH_RAPPORT",
+          "RAPPORT_INCREASED",
+          "RAPPORT_MAINTAINED"
+        ],
+        [
+          "RSE_USER_CS",
+          "SD_USER_CS",
+          "VSN_USER_CS"
+        ],
+        [
+          "VSN_HISTORY_SYSTEM",
+          "VSN_HISTORY_USER"
+        ],
+        [
+          "AVAILABLE_SHARED_EXPERIENCES"
+        ],
+        [
+          "greeting",
+          "start_attendance_elicitation",
+          "start_goal_elicitation",
+          "start_interest_elicitation_*",
+          "start_*_recommendation_*"
+        ]
+      ],
+      "addList": [
+        "RSE_SYSTEM_CS",
+        "RSE_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "RAPPORT_MAINTAINED",
+        "SD_USER_CS",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "GAZE_ELSEWHERE_NONVERBAL",
+        "SMILE_NONVERBAL"
+      ],
+      "description": "Referring to Shared Experiences",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "VSN",
+      "id": "VSN_SYSTEM_CS",
+      "preconditions": [
+        [
+          "HIGH_RAPPORT",
+          "RAPPORT_INCREASED"
+        ],
+        [
+          "VSN_USER_CS"
+        ],
+        [
+          "SMILE_NONVERBAL",
+          "GAZE_PARTNER_NONVERBAL"
+        ],
+        [
+          "NUM_TURNS_HIGHER_THAN_THRESHOLD",
+          "NOT_OVERLAP",
+          "ONCE_VSN_HISTORY_USER",
+          "NOT_VSN_HISTORY_SYSTEM"
+        ],
+        [
+          "feedback_goal_elicitation_*",
+          "feedback_attendance_elicitation_*",
+          "feedback_*_recommendation_*",
+          "start_attendance_elicitation",
+          "start_goal_elicitation",
+          "start_interest_elicitation_*",
+          "start_*_recommendation_*",
+          "do_attendance_elicitation",
+          "do_goal_elicitation",
+          "do_interest_elicitation_*"
+        ]
+      ],
+      "addList": [
+        "VSN_SYSTEM_CS",
+        "VSN_HISTORY_SYSTEM",
+        "RAPPORT_INCREASED",
+        "RAPPORT_DECREASED",
+        "SMILE_NONVERBAL"
+      ],
+      "deleteList": [
+        "NOT_VSN_HISTORY_SYSTEM",
+        "greeting",
+        "feedback_goal_elicitation_*",
+        "feedback_attendance_elicitation_*",
+        "feedback_*_recommendation_*",
+        "start_attendance_elicitation",
+        "start_goal_elicitation",
+        "start_interest_elicitation_*",
+        "start_*_recommendation_*",
+        "do_attendance_elicitation",
+        "do_goal_elicitation",
+        "do_interest_elicitation_*"
+      ],
+      "description": "Violation Social Norm",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "ASN",
+      "id": "ASN_SYSTEM_CS",
+      "preconditions": [
+        [
+          "LOW_RAPPORT",
+          "MEDIUM_RAPPORT",
+          "RAPPORT_MAINTAINED",
+          "RAPPORT_DECREASED"
+        ],
+        [
+          "NOT_ASN_HISTORY_SYSTEM"
+        ],
+        [
+          "outcome_*_recommendation_*",
+          "pre_closing",
+          "greeting",
+          "farewell",
+          "feedback_goal_elicitation_*",
+          "feedback_attendance_elicitation_*",
+          "feedback_*_recommendation_*",
+          "start_attendance_elicitation",
+          "start_goal_elicitation",
+          "start_interest_elicitation_*",
+          "start_*_recommendation_*"
+        ]
+      ],
+      "addList": [
+        "ASN_SYSTEM_CS",
+        "ASN_HISTORY_SYSTEM",
+        "RAPPORT_MAINTAINED",
+        "GAZE_PARTNER_NONVERBAL"
+      ],
+      "deleteList": [
+        "NOT_ASN_HISTORY_SYSTEM",
+        "outcome_*_recommendation_*",
+        "pre_closing",
+        "greeting",
+        "farewell",
+        "feedback_goal_elicitation_*",
+        "feedback_attendance_elicitation_*",
+        "feedback_*_recommendation_*",
+        "start_attendance_elicitation",
+        "start_goal_elicitation",
+        "start_interest_elicitation_*",
+        "start_*_recommendation_*"
+      ],
+      "description": "Adhere Social Norm",
+      "addGoals": []
+    },
+
+
+    {
+      "name": "NONE",
+      "id": "NONE_SYSTEM_CS",
+      "preconditions": [
+        []
+      ],
+      "addList": [],
+      "description": "NONE Conversational Strategy",
+      "addGoals": [],
+      "deleteList": []
+    }
+  ],
+  "states": [
+    "greeting"
+  ],
+  "goals": [
+
+  ],
+  "pi": 15,
+  "theta": 45,
+  "initialTheta": 15,
+  "phi": 70,
+  "gamma": 20,
+  "delta": 50,
+  "removePrecond": false
+}

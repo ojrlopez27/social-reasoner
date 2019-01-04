@@ -1,0 +1,165 @@
+{
+  "modules": [
+    {
+      "name": "SD",
+      "preconditions": [
+        [
+          "introduce"
+        ],
+        [
+          "low_rapport",
+          "medium_rapport"
+        ],
+        [
+          "several_ASN_history",
+          "PR_history",
+          "VSN_history"
+        ],
+        [
+          "SD_user",
+          "QESD_user"
+        ]
+      ],
+      "addList": [
+        "SD_system",
+        "SD_history"
+      ],
+      "description": "Self Disclosure",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "VSN",
+      "preconditions": [
+        [
+          "high_rapport"
+        ],
+        [
+          "VSN_user"
+        ]
+      ],
+      "addList": [
+        "VSN_system",
+        "VSN_history"
+      ],
+      "description": "Violation Social Norm",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "QESD",
+      "preconditions": [
+        [
+          "ask_if_first_time_attending",
+          "start_goal_elicitation",
+          "goal_elicitation",
+          "question_about_work",
+          "ask_somebody_to_meet",
+          "ask_meet_more_people",
+          "ask_to_start_session_recommendation",
+          "ask_to_start_food_recommendation",
+          "session_recommendation_results",
+          "food_recommendation_results",
+          "people_recommendation_results",
+          "parties_recommendation_results"
+        ]
+      ],
+      "addList": [
+        "QESD_system",
+        "QESD_history"
+      ],
+      "description": "Question to Elicit Self Disclosure",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "RSE",
+      "preconditions": [
+        [
+          "available_shared_experiences"
+        ]
+      ],
+      "addList": [
+        "RSE_system",
+        "RSE_history"
+      ],
+      "description": "Referring to Shared Experiences",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "PR",
+      "preconditions": [
+        [
+          "low_rapport"
+        ],
+        [
+          "no_PR_user"
+        ],
+        [
+          "SD_history",
+          "QESD_history"
+        ]
+      ],
+      "addList": [
+        "PR_system",
+        "PR_history"
+      ],
+      "description": "Praise",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "ASN",
+      "preconditions": [
+        [
+          "low_rapport"
+        ]
+      ],
+      "addList": [
+        "ASN_system",
+        "ASN_history"
+      ],
+      "description": "Adhere Social Norm",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "BC",
+      "preconditions": [
+        [
+          "high_jitter",
+          "high_shimmer"
+        ]
+      ],
+      "addList": [
+        "BC_system",
+        "BC_history"
+      ],
+      "description": "Back-Channel",
+      "addGoals": [],
+      "deleteList": []
+    },
+    {
+      "name": "NONE",
+      "preconditions": [ [] ],
+      "addList": [],
+      "description": "NONE Conversational Strategy",
+      "addGoals": [],
+      "deleteList": []
+    }
+  ],
+  "states": [
+    "greeting"
+  ],
+  "goals": [
+    "increase_rapport"
+  ],
+  "pi": 20,
+  "theta": 15,
+  "initialTheta": 15,
+  "phi": 20,
+  "gamma": 70,
+  "delta": 50,
+  "removePrecond": true
+}
