@@ -1,13 +1,22 @@
 # social-reasoner
 
-![coverage](https://img.shields.io/badge/coverage-90%25-yellowgreen.svg?cacheSeconds=2592000) 
-![language](https://img.shields.io/badge/language-Java-yellowgreen.svg?cacheSeconds=2592000) 
-![version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000)
-![build](https://img.shields.io/badge/build-passed-green.svg?cacheSeconds=2592000)
-![test](https://img.shields.io/badge/test-passed-green.svg?cacheSeconds=2592000)
-![codacy](https://img.shields.io/badge/codacy-B-green.svg?cacheSeconds=2592000)
+Status for master branch:
 
-Implementation of a Social Reasoner component for Conversational Agents and Chatbots. This repository is organized into two folders:
+[//]: # (this is a comment: see this link for badges using travis-CI, codecov, etc: https://github.com/mlindauer/SMAC3/blob/warmstarting_multi_model/README.md) 
+![build](https://img.shields.io/badge/build-passing-green.svg?cacheSeconds=2592000) 
+![test](https://img.shields.io/badge/test-passing-green.svg?cacheSeconds=2592000) 
+![coverage](https://img.shields.io/badge/coverage-90%25-yellowgreen.svg?cacheSeconds=2592000) 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3278c98625224ca5895f28623f1787a9)](https://www.codacy.com/app/ojrlopez27/social-reasoner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ojrlopez27/social-reasoner&amp;utm_campaign=Badge_Grade)
+
+Implementation:
+
+![version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000)
+![language](https://img.shields.io/badge/language-Java-yellowgreen.svg?cacheSeconds=2592000) 
+![dependencies](https://img.shields.io/badge/dependencies-sent2vec-orange.svg?cacheSeconds=2592000)
+
+## Overview
+
+This is an implementation of a Social Reasoner component for Conversational Agents and Chatbots. This repository is organized into two folders:
 - **SocialReasoner**: it contains the source code of the Social Reasoner, which uses a Spreading Activation mechanism so-called Behavior Networks (Pattie Maes, 1989, How todo the right thing). Internally, the system is organized into three packages wich correspond to the MVC architectural patter: model, view and control:
 	- **model**: this package contains classes that have access to data such as user history, messages, intents, etc. as well as a blackboard system that works as a Short-Term Memory and Broadcasting mechanism.
 	- **control**: this package contains controller classes for different aspects: communication (zmq), common utils (utils), emulators to tests experimental datasets (emulators), the spreading activation mechanism based on the Behavior Network model (bn), and a high-level implementation of the Social Reasoner (reasoner).
@@ -15,7 +24,7 @@ Implementation of a Social Reasoner component for Conversational Agents and Chat
 - **Docs**: this folder contains documents and papers about the Social Reasoner. 
 
 
-## Citation
+## How to cite our work
 
 Please cite the following papers if you use social-reasoner in your work:
 
