@@ -26,8 +26,6 @@ This is an implementation of a Social Reasoner component for Conversational Agen
 
 ## How to cite our work
 
-Please cite the following papers if you use social-reasoner in your work:
-
 [SIGDIAL 2016 paper](https://www.semanticscholar.org/paper/Socially-Aware-Animated-Intelligent-Personal-Agent-Matsuyama-Bhardwaj/8571611db04df42d9ddcca39b1a3c23c11d51b6d)
 ```
 @inproceedings{sigdial:2016,
@@ -50,7 +48,7 @@ Please cite the following papers if you use social-reasoner in your work:
 }
 ```
 
-[IVA 2018 paper (Best Paper Award)](https://dl.acm.org/citation.cfm?id=3267880&preflayout=tabs)
+[IVA 2018 paper](https://dl.acm.org/citation.cfm?id=3267880&preflayout=tabs)
 ```
 @inproceedings{iva:2018,
   title = {SOGO: A Social Intelligent Negotiation Dialogue System},
